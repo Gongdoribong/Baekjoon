@@ -7,8 +7,4 @@ for i in range(T):
         floor = H
         dist -= 1
 
-
-    if dist<10:
-        print(str(floor)+"0"+str(dist))
-    else:
-        print(str(floor)+str(dist))
+    print(str(floor)+format(str(dist)).zfill(2))
