@@ -1,1 +1,0 @@
-print("45\ntsey04")
