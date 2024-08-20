@@ -1,14 +1,15 @@
-def min_coins(N):
-    coins = [1, 2, 5, 7]
-    dp = [float('inf')] * (N + 1)
-    dp[0] = 0
-    
-    for i in range(1, N + 1):
-        for coin in coins:
-            if i - coin >= 0:
-                dp[i] = min(dp[i], dp[i - coin] + 1)
-    
-    return dp[N]
-
 N = int(input())
-print(min_coins(N))
+
+if(N!=3 and N%7 == 3):
+    tri = N//7 - 1
+    N = (N%7) + 7
+else:
+    tri = N//7
+    N = (N%7)
+tri += N//5
+N = (N%5)
+tri += N//2
+N = (N%2)
+tri += N//1
+
+print(tri)
