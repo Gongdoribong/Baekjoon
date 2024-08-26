@@ -4,7 +4,7 @@ T = int(input())
 for _ in range(T):
     n = int(sys.stdin.readline())
     cnt = 0
-    for i in range(8):
+    while(True):
         if n == 6174:
             print(cnt)
             break
